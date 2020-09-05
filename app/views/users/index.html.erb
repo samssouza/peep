@@ -1,0 +1,28 @@
+
+<h1>Users</h1>
+
+<% @user_search.each do |user| %>
+
+  <p>
+    <strong>Name:</strong>
+    <%= user.name %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= user.username %>
+  </p>
+  <p>
+
+  <%= form_with( model:[@user, @user.followers.build], local: true) do |form| %>
+
+    <div class="form-group">
+      <%= form.hidden_field :followed_user_id, value: user.id %>
+
+    </div>
+    <%= submit_tag "Follow", type: "submit", class: "btn btn-primary" %>
+
+  <% end %>
+
+
+
+<% end %>

@@ -1,0 +1,13 @@
+
+<%= form_with(model: [ @user, @user.friendship.build ], local: true) do |form| %>
+
+
+  <h2>Friends</h2>
+  <% @user.friendship.users.each do |user| %>
+
+    <p>
+      <strong>Content:</strong>
+
+    </p>
+  <% end %>
+<% end %>
