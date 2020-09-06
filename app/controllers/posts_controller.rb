@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     end
 
     @all_post = @all_post.sort_by {|hash| hash[:created_at]}
-
+    @logged_in_user = current_user
   end
 
   def create
