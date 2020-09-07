@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
+To run the project you will need the following dependencies installed on your machine. Although it might work on slightly modified versions(not guaranteed).
 
-Things you may want to cover:
+* Ruby version => v6.6.-1
 
-* Ruby version
+* Node Version >= v12.18.2
 
-* System dependencies
+* Yarn Version >= 1.22.5
 
-* Configuration
+* PostgreSQL Version =>  12.4
+  with user: "postgres" and password: "pass123"
+  The user should have enough rights to create and edit databases
 
-* Database creation
+## Running
 
-* Database initialization
+To run download the project and navigate to the folder using a command line tools(cmd or bash) and rum the following commands in order of appearance
+- gem install bundler
+- bundle
+- rake db:create && rake db:migrate
+- rake assets:precompile
+- rails s
 
-* How to run the test suite
+Note: PostgreSQL Server should be running in the background
 
-* Services (job queues, cache servers, search engines, etc.)
+## Last notes
 
-* Deployment instructions
-
-* ...
+The steps to run listed above were tested on a window 10 machine only
