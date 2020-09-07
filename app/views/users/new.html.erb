@@ -1,32 +1,57 @@
-<h1>Sign Up</h1>
 
-<%= form_with model: @user, url: users_path, local: true do |form| %>
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, type: "text", class: "form-control", placeholder: "Ex: Samuel Silva" %>
+<!--
+<div class="h-100"  style="background-image: url('images/sign-up.png');  background-size: cover;" >
+</div>
+-->
+<div class="container-fluid h-100" style="background-color:#1E1E1E ">
+  <div class="row h-100">
+    <div class="col d-flex align-items-center">
+      <div class="d-flex flex-column text-white">
+        <h1 class="display-1">Sign up</h1>
+        <h1 class="display-2">It's easy</h1>
+        <h1 class="display-3">Only 4 steps</h1>
+
+
+      </div>
+    </div>
+
+    <div class="mr-5 col align-self-center text-white">
+
+      <%= form_with model: @user, url: users_path, local: true do |form| %>
+        <div class="form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, type: "text", class: "form-control", placeholder: "Ex: Samuel Silva" %>
+
+        </div>
+
+        <div class="form-group">
+          <%= form.label :username, for: "exampleInputEmail1" %>
+          <%= form.text_field :username, type: "email", class: "form-control", placeholder: "Enter email" %>
+          <small id="emailHelp" class="form-text text-white">
+            We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+
+          <%= form.label :password, for: "exampleInputPassword1" %>
+          <%= form.text_field :password, type: "password", class: "form-control",
+                              id: "exampleInputPassword1", placeholder: "Password" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :about %>
+          <%= form.text_area :about, class: "form-control",
+                             placeholder: "Say something about you!" %>
+          <small id="aboutlHelp" class="form-text text-muted">
+            Shy? Don't worry, you can leave it empty.</small>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <%= submit_tag "Sign Up", type: "submit", class: "btn btn-outline-light" %>
+        </div>
+
+
+      <% end %>
+    </div>
 
   </div>
-
-  <div class="form-group">
-    <%= form.label :username, for: "exampleInputEmail1" %>
-    <%= form.text_field :username, type: "email", class: "form-control", placeholder: "Enter email" %>
-    <small id="emailHelp" class="form-text text-muted">
-      We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-
-    <%= form.label :password, for: "exampleInputPassword1" %>
-    <%= form.text_field :password, type: "password", class: "form-control",
-                        id: "exampleInputPassword1", placeholder: "Password" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :about %>
-    <%= form.text_area :about, class: "form-control",
-                       placeholder: "Say something about you!" %>
-    <small id="aboutlHelp" class="form-text text-muted">
-      Shy? Don't worry, you can leave it empty.</small>
-  </div>
-  <%= submit_tag "Sign Up", type: "submit", class: "btn btn-primary" %>
-
-<% end %>
+</div>

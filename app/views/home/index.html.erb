@@ -1,43 +1,51 @@
-<div class="h-100 bg-dark" >
+<div class="h-100"  style="background-color:#1E1E1E" >
 
-<div class="h-100"  style="background-image: url('images/home-img.png');  background-size: cover;" >
+  <div class="h-100"  style="background-image: url('images/home-img.png');  background-size: cover;" >
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1 class="display-1 text-white">Peep</h1>
+    <div class="ml-3 container-fluid">
+     <div class="row">
+      <div class="mt-5 pt-5 col">
+        <div class="row">
+          <h1 class="display-1 text-white">Peep</h1>
+
+        </div>
+
+        <div class="row">
+          <h1 class="display-4 text-white" >Just like twitter <br> but not quite</h1>
+        </div>
+        <div class="pt-2 row border-top">
+          <%= link_to 'Sign Up!', new_user_path, class:"badge badge-light", style: "height: 20px; width: 100px; " %>
+        </div>
       </div>
       <div class="col">
 
-        <%= form_with model: @user, url: request.fullpath, local: true do |form| %>
-            <div class="row">
-              <div class="col">
+        <div class="d-flex flex-column align-items-end ">
+
+          <%= form_with model: @user, url: request.fullpath, local: true do |form| %>
+
+            <div class="d-flex flex-row align-items-start">
+              <div class="p-2">
                 <%= form.text_field :username, type: "email", class: "form-control", placeholder: "Enter email" %>
               </div>
-              <div class="col">
+              <div class="p-2">
                 <%= form.text_field :password, type: "password", class: "form-control", id: "exampleInputPassword1", placeholder: "Password" %>
               </div>
-              <div class="col">
-                <%= submit_tag "Login", type: "submit", class: "btn btn-primary" %>
+              <div class="p-2">
+                <%= submit_tag "Login", type: "submit", class: "btn btn-outline-light" %>
 
               </div>
 
             </div>
 
 
-        <% end %>
+          <% end %>
+        </div>
       </div>
+     </div>
+
+
 
     </div>
-    <div class="row">
-      <h1 class="display-4 text-white" >Just like twitter <br> but not quite</h1>
-    </div>
-    <div class="row">
-      <%= link_to 'Sign Up!', new_user_path %>
-    </div>
-
 
   </div>
-
-</div>
 </div>
