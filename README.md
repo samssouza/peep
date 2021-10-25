@@ -10,9 +10,6 @@ To run the project you will need the following dependencies installed on your ma
 * Yarn Version >= 1.22.5
 
 * PostgreSQL Version =>  12.4
-  with user: "postgres" and password: "pass123"
-  The user should have enough rights to create and edit databases
-
 ## Running
 
 To run download the project and navigate to the folder using a command line tools(cmd or bash) and rum the following commands in order of appearance
